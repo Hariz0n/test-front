@@ -1,0 +1,9 @@
+<div class="company-list-actions">
+  <app-company-sort/>
+  <app-company-filter [industries]="filteringIndustries" [types]="filteringTypes"/>
+</div>
+<ul class="company-list">
+  <li *ngFor="let company of sortedAndFilteredCompanies | async">
+    <app-company-item [company]="company" />
+  </li>
+</ul>

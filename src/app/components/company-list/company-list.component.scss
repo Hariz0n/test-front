@@ -1,0 +1,12 @@
+.company-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.company-list-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}

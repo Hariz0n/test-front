@@ -1,0 +1,31 @@
+.sorting-button {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  height: 2rem;
+  font-weight: 700;
+  border: 1px solid black;
+  padding: .25rem .5rem;
+  border-radius: .5rem;
+  background: white;
+  transition: background .2s ease-in-out;
+  outline-offset: 1px;
+
+  &:focus {
+    outline: 2px solid #0070f3;
+  }
+  
+  &:hover {
+    background: #dddddd;
+  }
+
+  &__name {
+    line-height: 1.5rem;
+  }
+}
+
+.sorting-list {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}

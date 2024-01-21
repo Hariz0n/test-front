@@ -1,0 +1,25 @@
+:host {
+  flex-grow: 1;
+}
+
+.filters {
+  display: contents;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &__item {
+    flex: 1 1 16rem;
+    line-height: 1.5rem;
+    height: 2rem;
+    border: 1px solid black;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+    outline-offset: 1px;
+
+    &:focus-visible {
+      outline: 2px solid #0070f3;
+    }
+  }
+}

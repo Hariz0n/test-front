@@ -1,0 +1,21 @@
+<section class="company-item">
+  <header class="company-item__top-section">
+    <div class="company-item__header-block">
+      <h1 class="company-item__header">
+        <a routerLink="/detail/{{company.uid}}" class="company-item__link">
+          {{ company.business_name }}, <span class="company-item__header--industy">{{ company.industry }}</span>
+        </a>
+      </h1>
+      <p class="company-item__subtitle">{{ company.catch_phrase }}</p>
+    </div>
+    <img
+      class="company-item__logo"
+      [src]="company.logo"
+      [alt]="company.business_name"
+    />
+  </header>
+  <main class="company-item__middle-section">
+    <p>{{ company.type }}</p>
+    <a href="tel:{{company.phone_number}}">{{ company.phone_number}}</a>
+  </main>
+</section>

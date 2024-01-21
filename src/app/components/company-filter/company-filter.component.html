@@ -1,0 +1,26 @@
+<form class="filters" [formGroup]="filterForm">
+  <input
+    class="filters__item"
+    id="business_name"
+    type="text"
+    formControlName="business_name"
+    placeholder="Название компании"
+  />
+  <select class="filters__item" name="type" id="type" formControlName="type">
+    <option value="all">Все</option>
+    <option *ngFor="let type of filteringTypes" [value]="type">
+      {{ type }}
+    </option>
+  </select>
+  <select
+    class="filters__item"
+    name="industry"
+    id="industry"
+    formControlName="industry"
+  >
+    <option value="all">Все</option>
+    <option *ngFor="let industry of filteringIndustries" [value]="industry">
+      {{ industry }}
+    </option>
+  </select>
+</form>

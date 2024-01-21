@@ -1,0 +1,58 @@
+.company-item {
+  border: 1px solid black;
+  border-radius: 16px;
+  outline-offset: 1px;
+
+  &:has(.company-item__link:focus) {
+    outline: 2px solid #0070f3;
+  }
+
+  &__top-section {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &__logo {
+    height: 4rem;
+  }
+
+  &__header-block {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: black;
+    outline: none;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  &__header {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.25;
+
+    &--industy {
+      color: darkslateblue;
+    }
+  }
+
+  &__subtitle {
+    color: gray;
+  }
+
+  &__middle-section {
+    padding: 0 1rem 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
