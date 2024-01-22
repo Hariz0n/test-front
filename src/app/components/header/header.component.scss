@@ -25,6 +25,13 @@
     color: black;
     text-decoration: none;
     font-weight: 700;
+    outline: none;
+    outline-offset: .25rem;
+    border-radius: .5rem;
+    
+    &:focus-visible {
+      outline: 2px solid #0070f3;
+    }
   }
 
   &__navigation-link--active {
