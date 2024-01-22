@@ -1,0 +1,72 @@
+.company-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: 2rem;
+
+    &--smaller {
+      font-size: 1.5rem;
+    }
+
+    &--industry {
+      color: cadetblue;
+    }
+  }
+
+  &__subtitle {
+    color: gray;
+  }
+
+  &__logo {
+    height: 4rem;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  &__phone {
+    text-decoration: none;
+    color: cornflowerblue;
+    position: relative;
+
+    &::after {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: cornflowerblue;
+      content: '';
+      height: 2px;
+      width: 0%;
+      transition: width .2s ease-in-out;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+:host {
+  @extend .company-detail
+}

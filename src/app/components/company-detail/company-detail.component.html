@@ -1,1 +1,32 @@
-<p>company-detail works!</p>
+<ng-container *ngIf="company$ | async as company">
+  <header class="company-detail__header">
+    <div>
+      <h1 class="company-detail__title">
+        <span>{{ company.business_name }}, </span>
+        <span class="company-detail__title--industry">{{
+          company.industry
+        }}</span>
+      </h1>
+      <span class="company-detail__subtitle">{{ company.catch_phrase }}</span>
+    </div>
+    <img
+      class="company-detail__logo"
+      src="{{ company.logo }}"
+      alt="{{ company.business_name }}"
+    />
+  </header>
+  <main class="company-detail__main">
+    <h2 class="company-detail__title company-detail__title--smaller">Контактная информация:</h2>
+    <ul class="company-detail__list">
+      <li>
+        Номер телефона:
+        <a class="company-detail__phone" href="tel:{{ company.phone_number }}">{{ company.phone_number }}</a>
+      </li>
+      <li>
+        <address>
+          Адрес: {{company.full_address}}
+        </address>
+      </li>
+    </ul>
+  </main>
+</ng-container>
