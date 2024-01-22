@@ -1,0 +1,24 @@
+<aside class="company-map__aside">
+  <button
+    *ngFor="let company of companies"
+    class="company-map__button"
+    (click)="onCompanyButtonClick([company.latitude, company.longitude])"
+  >
+    {{ company.business_name }}
+  </button>
+</aside>
+<main class="company-map__main">
+  <ya-map
+    [center]="[companies[0]?.latitude || 0, companies[0]?.longitude || 0]"
+    (ready)="onObjectManagerReady($event)"
+  >
+    <ya-clusterer [options]="clusterOptions">
+      <ya-placemark
+        *ngFor="let placemark of placemarks"
+        [geometry]="placemark.geometry"
+        [properties]="placemark.properties"
+        [options]="placemark.options"
+      ></ya-placemark>
+    </ya-clusterer>
+  </ya-map>
+</main>

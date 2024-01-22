@@ -23,8 +23,8 @@ export const routes: Routes = [
       {
         path: 'map',
         loadComponent: () =>
-          import('./components/companies-map/companies-map.component').then(
-            (m) => m.CompaniesMapComponent
+          import('./components/company-map/company-map.component').then(
+            (m) => m.CompanyMapComponent
           ),
       },
     ],
